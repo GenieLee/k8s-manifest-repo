@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 505237732499.dkr.ecr.ap-northeast-2.amazonaws.com/member-service
   newName: 505237732499.dkr.ecr.ap-northeast-2.amazonaws.com/member-service
-  newTag: bd7bd3c4
+  newTag: aabbcd02
 resources:
 - ../../base
 patchesStrategicMerge:
