@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sgi-edu-member-service-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sgi-edu-member-service-deployment
+  template:
+    metadata:
+      labels:
+        app: sgi-edu-member-service-deployment
+    spec:
+      containers:
+        - name: sgi-edu-member-service-deployment
+          image: 505237732499.dkr.ecr.ap-northeast-2.amazonaws.com/member-service:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

@@ -1,0 +1,17 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sgi-edu-member-service-deployment
+  namespace: default
+  labels:
+    env: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sgi-edu-member-service-deployment
+  template:
+    metadata:
+      labels:
+        app: sgi-edu-member-service-deployment
